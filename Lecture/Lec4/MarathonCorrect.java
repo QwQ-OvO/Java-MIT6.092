@@ -39,7 +39,7 @@ public class MarathonCorrect {
         /**
          * 如果secondIdx被初始化为 0，而恰好最小元素索引也是0，会导致永远无法找到真正的第二小元素
          * 解法 1： 设置初始化为 int secondIdx = -1
-         * 解法2：三元表达式 int secondFastIndex = (maxIndex == 0) ? 1  : 0
+         * 解法2：三元表达式 int secondFastIndex = (maxIndex == 0) ? 1  : 0。前提是数组至少有两个元素
          */
         int secondIdx = -1;
         int minIdx = getMinIndex(values);
