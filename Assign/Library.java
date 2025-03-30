@@ -34,7 +34,9 @@ public class Library {
     }
 
     /**
-     * 打印图书馆地址
+     * 打印图书馆的地址
+     * printAddress 的核心功能是直接输出图书馆地址到控制台，而不是返回一个值供其他代码使用
+     * 设计为一个 void 方法，仅执行打印操作
      */
     public void printAddress() {
         System.out.println(this.address);
@@ -56,15 +58,15 @@ public class Library {
             if (book.getTitle().equals(bookTitle)) {
                 // 找到书籍，标记为 true
                 found = true;
-            }
-            // 检查书籍是否已被借出，调用Book类方法
-            if (book.isBorrowed()) {
-                // 情况1：书籍已借出
-                System.out.println("Sorry, this book is already borrowed.");
-            } else {
-                // 情况2：书籍未借出，执行借阅操作
-                book.borrowed();
-                System.out.println("You successfully borrowed" + bookTitle);
+                // 检查书籍是否已被借出，调用Book类方法
+                if (book.isBorrowed()) {
+                    // 情况1：书籍已借出
+                    System.out.println("Sorry, this book is already borrowed.");
+                } else {
+                    // 情况2：书籍未借出，执行借阅操作
+                    book.borrowed();
+                    System.out.println("You successfully borrowed " + bookTitle);
+                }
             }
             // 找到书籍后立即退出循环，无需继续遍历
             break;
