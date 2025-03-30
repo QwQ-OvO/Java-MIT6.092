@@ -51,8 +51,8 @@ public class Library {
         boolean found = false;
 
         // 遍历图书馆中的所有书籍（仅遍历已存储的有效书籍，避免空指针）
-        for (int i = 0; i < bookCount; i++) { //没懂为什么不是i<bookCount-1
-            // 获取当前索引位置的书籍对象引用 - 没懂； books[i] 可能是具体 Book 对象 - 为什么是可能
+        for (int i = 0; i < bookCount - 1; i++) { //没懂为什么不是i<bookCount-1
+            // 获取当前索引位置的书籍对象引用 - 没懂； books[i] 是一个Book对象的引用
             Book book = collection[i]; // 没懂为什么赋值了一个Book类的book变量
             // 比较当前书籍的标题与目标标题，调用了Book类中方法，但为什么是“book.”
             if (book.getTitle().equals(bookTitle)) {
@@ -69,7 +69,7 @@ public class Library {
                 }
             }
             // 找到书籍后立即退出循环，无需继续遍历
-            break;
+            return; // 使用return直接结束方法 - 不用break（？），
         }
         // 遍历结束后，若未找到书籍（found 仍为 false）
         if (!found) {
@@ -82,7 +82,7 @@ public class Library {
      * @param bookTitle 要归还的书籍标题
      */
     public void returnBook(String bookTitle) {
-        for (int i = 0; i < bookCount; i++) {
+        for (int i = 0; i < bookCount - 1; i++) {
             Book book = collection[i];
             if (book.getTitle().equals(bookTitle)) {
                 if (book.isBorrowed()) { //isBorrowed 是查询当前借阅状态的方法
@@ -91,7 +91,7 @@ public class Library {
                 } else {
                     System.out.println("This book was not borrowed.");
                 }
-                return; //为什么这里是return不是break
+                return; //使用return会直接结束整个方法的执行
             }
         }
         System.out.println("Sorry, this book is not in our catalog.");
@@ -102,14 +102,14 @@ public class Library {
      */
     public void printAvailableBooks() {
         boolean hasAvailable = false;
-        for (int i = 0; i < bookCount; i++) {
+        for (int i = 0; i < bookCount - 1; i++) {
             Book book = collection[i];
             if (!book.isBorrowed()) {
                 System.out.println(book.getTitle());
                 hasAvailable = true; // 这里为什么要设置一个是否开关
             }
         }
-        if (!hasAvailable) { // !hasAvailable是为false的意思？
+        if (!hasAvailable) { // 变量用于跟踪是否找到了可用书籍。如果循环结束后hasAvailable仍为false，说明没有找到任何可用的书籍
             System.out.println("No book in catalog");
         }
     }
