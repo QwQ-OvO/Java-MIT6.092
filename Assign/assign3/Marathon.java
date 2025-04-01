@@ -1,3 +1,5 @@
+package assign3;
+
 public class Marathon {
 
     public static void main(String[] args) {

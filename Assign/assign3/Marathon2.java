@@ -1,3 +1,5 @@
+package assign3;
+
 public class Marathon2 {
 
     public static int findFastest(int[] times) {

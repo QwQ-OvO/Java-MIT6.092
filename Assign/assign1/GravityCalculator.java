@@ -1,3 +1,5 @@
+package assign1;
+
 /**
  * The output of the unmodified program:
  * "The object's position after 10.0 seconds is 0.0 m."

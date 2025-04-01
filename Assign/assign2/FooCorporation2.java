@@ -1,3 +1,5 @@
+package assign2;
+
 public class FooCorporation2 {
 
     /**

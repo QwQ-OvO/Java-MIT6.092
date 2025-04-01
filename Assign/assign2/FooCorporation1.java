@@ -1,3 +1,5 @@
+package assign2;
+
 public class FooCorporation1 {
 
     /** 如果不使用void，设定返回值为double，无法直接提示报错，只能使用特殊值表示错误*/
