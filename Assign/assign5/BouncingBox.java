@@ -24,6 +24,16 @@ public class BouncingBox {
     }
 
     /**
+     * 设置了移动的方向向量
+     * @param xDirection x方向的移动速度
+     * @param yDirection y方向的移动速度
+     */
+    public void setMovementVector(int xDirection, int yDirection) {
+        this.xDirection = xDirection;
+        this.yDirection = yDirection;
+    }
+
+    /**
      * Draws the box at its current position on to surface.
      */
     public void draw(Graphics surface) {
