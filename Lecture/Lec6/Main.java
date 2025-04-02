@@ -1,6 +1,5 @@
 package Lec6;
 
-import assign5.DrawGraphics;
 
 import javax.swing.JFrame;
 import java.awt.Graphics;
@@ -31,6 +30,7 @@ public class Main extends JFrame { // 继承 JFrame，表示这是一个窗口�
     public void paint(Graphics g) {
         super.paint(g); // 调用父类 JFrame 的 paint 方法（绘制窗口边框、标题栏等）
         graphics.drawAll(g); // 调用自定义绘图逻辑，绘制所有图形
+
     }
 
     /**
