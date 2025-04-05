@@ -22,10 +22,18 @@ public class DrawGraphics {
 
         boxes = new ArrayList<>(); //创建ArrayList实例存储盒子
 
-        /** 方法1.使用局部变量声明与初始化的方法 */
-        BouncingBox box = new BouncingBox(200, 50, Color.RED); // 创建一个新的BouncingBox对象，初始位置在坐标(200,50)，颜色为红色
-        box.setMovementVector(2, 3); // 设置盒子的运动向量，水平速度为2，垂直速度为3
-        boxes.add(box); // 将创建好的盒子对象添加到boxes集合中以便后续处理和渲染
+        /** 方法1.使用局部变量声明与初始化的方法（推荐） */
+        BouncingBox box1 = new BouncingBox(200, 50, Color.RED); // 创建一个新的BouncingBox对象，初始位置在坐标(200,50)，颜色为红色
+        box1.setMovementVector(2, 3); // 设置盒子的运动向量，水平速度为2，垂直速度为3
+        boxes.add(box1); // 将创建好的盒子对象添加到boxes集合中以便后续处理和渲染
+
+        BouncingBox box2 = new BouncingBox(5,  1, Color.YELLOW);
+        box2.setMovementVector(1, 0);
+        boxes.add(box2);
+
+        BouncingBox box3 = new BouncingBox(100, 100, Color.GREEN);
+        box3.setMovementVector(0, 2);
+        boxes.add(box3);
 
         /**方法2.直接添加新实例到列表，不创建局部变量 */
 //        boxes.add(new BouncingBox(200, 500, Color.RED));
