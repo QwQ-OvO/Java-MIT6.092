@@ -1,6 +1,7 @@
 package assign6;
 
 import java.awt.Graphics;
+
 public class Bouncer {
     private int x;
     private int y;

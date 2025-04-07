@@ -1,9 +1,9 @@
 package assign6;
 
-import java.awt.BasicStroke;
+import java.awt.BasicStroke; // 导入BasicStroke类，用于定义线条的粗细、样式
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
+import java.awt.Graphics2D; // 导入Graphics的子类Graphics2D类，提供更高级的2D绘图功能
 
 public class Rectangle implements Sprite {
     private int width;
