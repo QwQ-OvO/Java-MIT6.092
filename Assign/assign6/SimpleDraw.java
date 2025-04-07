@@ -1,11 +1,14 @@
 package assign6;
 
-import assign5.DrawGraphics;
-
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  * Displays a window and delegates drawing to DrawGraphics.

@@ -57,7 +57,7 @@ public class Oral implements Sprite {
 
     /**
      * 获取 Oral的高度。
-     * @return Oral高度（像素）
+     * @return Oral高 度（像素）
      */
     @Override
     public int getHeight() {
