@@ -66,4 +66,10 @@ public class InheritanceDemo {
     }
 }
 
+/**
+ * 更多参考资料：
+ * https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming
+ * https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html
+ */
+
 
