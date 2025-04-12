@@ -1,8 +1,11 @@
 package Lec7.Exception;
 
-import static sun.jvm.hotspot.runtime.BasicObjectLock.size;
-
 public class MyException extends Exception {
+
+    // 添加一个简单的size方法来支持get方法
+    private int size() {
+        return 0; // 示例实现，返回一个固定值
+    }
 
     /**
      * Java中异常处理的基础实现
@@ -33,7 +36,7 @@ public class MyException extends Exception {
              */
         } catch (ArrayIndexOutOfBoundsException e) {
             // 捕获并处理数组索引越界异常
-            System.out.println("Oh dear:!");
+            System.out.println("Oh dear!");
             System.out.println("Caught exception: " + e.getMessage());
             /**
              * finally 块是可选的
@@ -56,7 +59,7 @@ public class MyException extends Exception {
      * 方法声明 throws ArrayOutOfBoundsException，表明它不会处理这个异常
      * 调用 doBad() 的代码必须准备处理这个异常
      */
-    void dobad() throws ArrayIndexOutOfBoundsException {
+    void doBad() throws ArrayIndexOutOfBoundsException {
         get(-1);
     }
 
@@ -74,7 +77,20 @@ public class MyException extends Exception {
      * 这个错误信息包含异常类型和调用链，有助于调试
      * 程序通常会终止执行
      */
-    public static void main(String[] args) {}
+    public static void main(String[] args) throws ArrayIndexOutOfBoundsException {
+        // 创建实例以调用非静态方法
+        MyException myEx = new MyException();
+
+        // 方法1：直接调用doBad()让异常传播到main
+        // myEx.doBad();
+
+        // 方法2：使用try-catch处理异常
+        try {
+            myEx.doBad();
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Main方法捕获异常: " + e.getMessage());
+        }
+    }
 }
 
 /**
