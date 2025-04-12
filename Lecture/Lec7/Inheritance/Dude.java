@@ -1,4 +1,4 @@
-package Lec7;
+package Lec7.Inheritance;
 
 public class Dude {
     public String name;

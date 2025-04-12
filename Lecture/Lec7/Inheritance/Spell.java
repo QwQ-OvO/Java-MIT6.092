@@ -1,6 +1,4 @@
-package Lec7;
-
-import java.util.ArrayList;
+package Lec7.Inheritance;
 
 public class Spell {
 

@@ -1,6 +1,6 @@
-package Lec7;
+package Lec7.Inheritance;
 
-public class GrandWizard extends Wizard{
+public class GrandWizard extends Wizard {
 
     public GrandWizard(String name) {
         super(name);

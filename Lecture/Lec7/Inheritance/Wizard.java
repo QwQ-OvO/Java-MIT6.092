@@ -1,4 +1,4 @@
-package Lec7;
+package Lec7.Inheritance;
 
 import java.util.ArrayList;
 
