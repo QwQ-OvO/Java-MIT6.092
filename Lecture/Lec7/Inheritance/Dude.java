@@ -1,5 +1,6 @@
 package Lec7.Inheritance;
 
+/** Parent of Wizard */
 public class Dude {
     public String name;
     public int hp = 100;

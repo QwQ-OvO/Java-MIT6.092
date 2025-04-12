@@ -11,7 +11,6 @@ import java.util.ArrayList;
  * If A doesn’t implement something Java searches ancestors
  *
  * Java面向对象编程中的重要概念：
- *
  * 继承（一个类继承另一个类的属性和方法）
  * 方法覆盖（子类可以提供父类方法的新实现）
  * 向上转型（子类对象可以被视为父类类型）

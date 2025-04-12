@@ -18,7 +18,7 @@ public class Spell {
         return manaCost;
     }
 
-    public void effect(Dude target) {
+    public void spellEffect(Dude target) {
         System.out.println("Casting " + name + " on " + target.name);
         target.hp -= 20;
     }

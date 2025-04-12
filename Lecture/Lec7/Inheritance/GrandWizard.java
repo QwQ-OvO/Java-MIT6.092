@@ -1,5 +1,6 @@
 package Lec7.Inheritance;
 
+/**Subclass of Wizard */
 public class GrandWizard extends Wizard {
 
     public GrandWizard(String name) {

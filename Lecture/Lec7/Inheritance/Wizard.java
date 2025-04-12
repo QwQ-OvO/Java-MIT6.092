@@ -3,7 +3,7 @@ package Lec7.Inheritance;
 import java.util.ArrayList;
 
 /**
- * Wizard is a subclass of Dude
+ * Subclass of Dude
  * Wizard can use everything* the Dude has
  * Wizard can do everything* Dude can do
  * Can use a Wizard like a Dude too
