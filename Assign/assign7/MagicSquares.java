@@ -45,7 +45,7 @@ public class MagicSquares {
         BufferedReader bufferedReader2 = new BufferedReader(fileReader2);
         String line2 = null;
         while ((line2 = bufferedReader2.readLine()) != null) {
-            System.out.println(line2);
+            String[] values = line2.split("\t");
         }
         bufferedReader2.close();
     }
